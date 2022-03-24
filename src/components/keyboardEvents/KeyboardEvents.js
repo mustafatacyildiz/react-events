@@ -1,5 +1,6 @@
 const KeyboardEvents = () => {
   // keyDown
+  const handleKeyDown = (e) => e.key === "Enter" && alert("form submitted");
 
   //keyUp
 
@@ -8,12 +9,13 @@ const KeyboardEvents = () => {
   // paste event
 
   // copy
+  const handleCopy = () => alert("dont copy my content");
 
   return (
-    <div style={{ marginTop: '30px' }}>
+    <div style={{ marginTop: "30px" }}>
       <h2>KeyboardEvents</h2>
-      <input type="text" />
-      <p>
+      <input type="text" onKeyDown={handleKeyDown} />
+      <p onCopy={handleCopy}>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever
         since the 1500s, when an unknown printer took a galley of type and
